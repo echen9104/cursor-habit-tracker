@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HabitCalendar from './components/HabitCalendar';
+import HabitCalendar from '../components/HabitCalendar';
 import { AddHabitForm } from "@/components/AddHabitForm"
 import { HabitCard } from "@/components/HabitCard"
 import { Button } from "@/components/ui/button"
@@ -26,6 +26,7 @@ export default function Home() {
     <div className="flex justify-center items-center md:px-32 px-12 py-12">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">        
         <HabitsSection habits={dummyHabits} />
+        <HabitCalendar habits={dummyHabits} progress={dummyProgress} />
       </main>
     </div>
   );
