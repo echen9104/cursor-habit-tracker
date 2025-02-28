@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import Link from "next/link"
 
 const formSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -156,6 +157,11 @@ export default function SignupPage() {
               <Button type="submit" className="w-full">
                 Sign Up
               </Button>
+              <div className="text-center mt-4">
+                <Link href="/login" className="text-sm text-blue-600 hover:text-blue-800">
+                  Already have an account? Login
+                </Link>
+              </div>
             </form>
           </Form>
         </CardContent>
